@@ -67,6 +67,14 @@
 }
 
 - (void)sa_track:(SEL)action to:(id)to from:(NSObject *)from forEvent:(UIEvent *)event {
+    if (to) {
+        Class toClass = [to class];
+        if (toClass &&
+            [[SensorsAnalyticsSDK sharedInstance]
+             isViewTypeIgnored:toClass]) {
+            return;
+        }
+    }
     // 过滤多余点击事件，因为当 from 为 UITabBarItem，event 为 nil， 采集下次类型为 button 的事件。
     if ([from isKindOfClass:UITabBarItem.class] || [from isKindOfClass:UIBarButtonItem.class]) {
         return;

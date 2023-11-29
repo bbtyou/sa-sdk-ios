@@ -98,7 +98,9 @@ static void *const kSALastAppClickIntervalPropertyName = (void *)&kSALastAppClic
     NSMutableArray<NSString *> *elementContentArray = [NSMutableArray array];
     for (UIView *subview in self.subviews) {
         // 忽略隐藏控件
-        if (subview.isHidden || subview.sensorsAnalyticsIgnoreView) {
+        if (subview.isHidden || subview.sensorsAnalyticsIgnoreView
+            || [[SensorsAnalyticsSDK sharedInstance]
+                isViewTypeIgnored:subview.class]) {
             continue;
         }
         NSString *temp = subview.sensorsdata_elementContent;
