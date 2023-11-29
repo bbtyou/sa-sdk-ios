@@ -129,11 +129,11 @@ Pod::Spec.new do |s|
     h.public_header_files = 'SensorsAnalyticsSDK/Exposure/SAConfigOptions+Exposure.h', 'SensorsAnalyticsSDK/Exposure/SAExposureConfig.h', 'SensorsAnalyticsSDK/Exposure/SAExposureData.h', 'SensorsAnalyticsSDK/Exposure/SensorsAnalyticsSDK+Exposure.h', 'SensorsAnalyticsSDK/Exposure/UIView+ExposureIdentifier.h', 'SensorsAnalyticsSDK/Exposure/SAExposureListener.h'
   end
 
-  # SDK 切换到英文版，运营商属性、日志和弹框提示等，都换成英文。使用前咨询神策售后技术顾问，否则请慎重使用！
-  s.subspec 'EnglishResources' do |e|
-    e.dependency 'SensorsAnalyticsSDK/Base'
-    e.source_files = 'SpecialFileSources/SACoreResources+English.{h,m}'
-    e.project_header_files = 'SpecialFileSources/SACoreResources+English.h'
-  end
+  # # SDK 切换到英文版，运营商属性、日志和弹框提示等，都换成英文。使用前咨询神策售后技术顾问，否则请慎重使用！
+  # s.subspec 'EnglishResources' do |e|
+  #   e.dependency 'SensorsAnalyticsSDK/Base'
+  #   e.source_files = 'SpecialFileSources/SACoreResources+English.{h,m}'
+  #   e.project_header_files = 'SpecialFileSources/SACoreResources+English.h'
+  # end
 
 end
