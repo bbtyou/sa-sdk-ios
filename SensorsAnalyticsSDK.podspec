@@ -114,12 +114,12 @@ Pod::Spec.new do |s|
   end
 
   # 使用老版 Cell 点击全埋点采集方案，可能导致某些场景，事件漏采集。使用前建议咨询神策售后技术顾问，否则请慎重使用！
-  s.subspec 'DeprecatedCellClick' do |d|
-    d.ios.deployment_target = '9.0'
-    d.dependency 'SensorsAnalyticsSDK/Core'
-    d.source_files = 'CellClick_HookDelegate_Deprecated/*.{h,m}'
-    d.project_header_files = 'CellClick_HookDelegate_Deprecated/*.h'
-  end
+  # s.subspec 'DeprecatedCellClick' do |d|
+  #   d.ios.deployment_target = '9.0'
+  #   d.dependency 'SensorsAnalyticsSDK/Core'
+  #   d.source_files = 'CellClick_HookDelegate_Deprecated/*.{h,m}'
+  #   d.project_header_files = 'CellClick_HookDelegate_Deprecated/*.h'
+  # end
 
   # 支持曝光
   s.subspec 'Exposure' do |h|
