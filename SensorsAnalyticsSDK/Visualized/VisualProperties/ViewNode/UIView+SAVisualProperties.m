@@ -279,7 +279,7 @@ static void *const kSAViewNodePropertyName = (void *)&kSAViewNodePropertyName;
 	 RCTUITextField，未输入元素内容， text 为 @""，而非 nil
 	 */
     if (self.text.length > 0) {
-        return self.text;
+        return @"";
     }
     return self.placeholder;
     /*
